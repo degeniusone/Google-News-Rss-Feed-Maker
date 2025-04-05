@@ -66,9 +66,9 @@ const MAIN_TOPICS = [
   { value: "CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx1YlY4U0FtVnVHZ0pWVXlnQVAB", label: "World" },
   { value: "CAAqIggKIhxDQkFTRHdvSkwyMHZNRGxqTjNjd0VnSmxiaWdBUAE", label: "US" },
   { value: "CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB", label: "Business" },
-  { value: "CAAqJggKIiBDQkFTRWdvSUwyMHZNRGRqTVhZU0FtVnVHZ0pWVXlnQVAB", label: "Technology" },
-  { value: "CAAqJggKIiBDQkFTRWdvSUwyMHZNREpxYW5RU0FtVnVHZ0pWVXlnQVAB", label: "Entertainment" },
-  { value: "CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp1ZEdvU0FtVnVHZ0pWVXlnQVAB", label: "Sports" },
+  { value: "CAAqJggKIiBDQkFTRWdvSUwyMHZNREpxYW5RU0FtVnVHZ0pWVXlnQVAB", label: "Technology" },
+  { value: "CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp1ZEdvU0FtVnVHZ0pWVXlnQVAB", label: "Entertainment" },
+  { value: "CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp0Y1RjU0FtVnVHZ0pWVXlnQVAB", label: "Sports" },
   { value: "CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp0Y1RjU0FtVnVHZ0pWVXlnQVAB", label: "Science" },
   { value: "CAAqIQgKIhtDQkFTRGdvSUwyMHZNR3QwTlRFU0FtVnVLQUFQAQ", label: "Health" },
 ]
@@ -276,7 +276,8 @@ export default function GoogleNewsRSSMaker() {
     let url = ""
 
     // Group items by type
-    const topics = feedItems.filter((item) => item.type === "topic" || item.type === "main-topic")
+    const mainTopics = feedItems.filter((item) => item.type === "main-topic")
+    const topics = feedItems.filter((item) => item.type === "topic")
     const keywords = feedItems.filter((item) => item.type === "keyword")
     const sites = feedItems.filter((item) => item.type === "site")
     const locations = feedItems.filter((item) => item.type === "location")
@@ -285,14 +286,14 @@ export default function GoogleNewsRSSMaker() {
     let query = ""
     let hasTopicOrLocation = false
 
-    // Handle topics (if any)
-    if (topics.length > 0) {
-      // Google News only supports one topic per feed
-      const topic = topics[0]
+    // Handle main topics (only one allowed)
+    if (mainTopics.length > 0) {
+      // Google News only supports one main topic per feed
+      const topic = mainTopics[0]
       url = `https://news.google.com/rss/topics/${topic.value}?hl=${language}&gl=${region}&ceid=${region}:${language}`
       hasTopicOrLocation = true
     }
-    // Handle locations (if any and no topics)
+    // Handle locations (if any and no main topics)
     else if (locations.length > 0) {
       // Google News only supports one location per feed
       const location = locations[0]
@@ -300,8 +301,8 @@ export default function GoogleNewsRSSMaker() {
       hasTopicOrLocation = true
     }
 
-    // If we have keywords or sites, we need to build a search query
-    if ((keywords.length > 0 || sites.length > 0) && !hasTopicOrLocation) {
+    // If we have regular topics, keywords or sites, we need to build a search query
+    if ((topics.length > 0 || keywords.length > 0 || sites.length > 0) && !hasTopicOrLocation) {
       // Add keywords with OR operator
       if (keywords.length > 0) {
         const keywordQueries = keywords.map((k) => {
@@ -343,6 +344,20 @@ export default function GoogleNewsRSSMaker() {
           query += ` OR ${siteQueries.join(" OR ")}`
         } else {
           query = siteQueries.join(" OR ")
+        }
+      }
+
+      // Add regular topics with OR operator
+      if (topics.length > 0) {
+        const topicQueries = topics.map((t) => {
+          let q = `topic:${t.value}`
+          return q
+        })
+
+        if (query) {
+          query += ` OR ${topicQueries.join(" OR ")}`
+        } else {
+          query = topicQueries.join(" OR ")
         }
       }
 
@@ -1095,4 +1110,3 @@ export default function GoogleNewsRSSMaker() {
     </div>
   )
 }
-
