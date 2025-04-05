@@ -21,17 +21,17 @@ export default function LegalPage({ onBack }: LegalPageProps) {
             <ArrowLeft className="h-6 w-6" />
           </Button>
           <h1 className="text-3xl font-bold">
-            <span className="text-[#F8B700]">Google News RSS</span> <span className="text-[#F87900]">Generator</span>
+            <span className="text-[#F8B700]">Google News RSS</span> <span className="text-[#F8B700]">Maker</span>
             <span className="text-xl ml-2 text-zinc-400">Legal Information</span>
           </h1>
         </div>
 
         <div className="space-y-8">
           <section>
-            <h2 className="text-2xl font-bold text-[#F87900] mb-4">Terms of Use</h2>
+            <h2 className="text-2xl font-bold text-[#F8B700] mb-4">Terms of Use</h2>
             <p className="text-zinc-300 mb-4">
-              By using the Google News RSS Generator, you agree to these terms and conditions. If you do not agree to
-              these terms, please do not use this tool.
+              By using the Google News RSS Maker, you agree to these terms and conditions. If you do not agree to these
+              terms, please do not use this tool.
             </p>
             <p className="text-zinc-300">
               This tool is provided "as is" without warranty of any kind, either expressed or implied, including, but
@@ -40,10 +40,10 @@ export default function LegalPage({ onBack }: LegalPageProps) {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F87900] mb-4">Disclaimer</h2>
+            <h2 className="text-2xl font-bold text-[#F8B700] mb-4">Disclaimer</h2>
             <p className="text-zinc-300 mb-4">
-              Google News RSS Generator is not affiliated with, endorsed by, or sponsored by Google. All Google
-              trademarks and logos are property of Google Inc.
+              Google News RSS Maker is not affiliated with, endorsed by, or sponsored by Google. All Google trademarks
+              and logos are property of Google Inc.
             </p>
             <p className="text-zinc-300 mb-4">
               This tool simply helps users generate valid RSS feed URLs for Google News based on Google's existing RSS
@@ -56,9 +56,9 @@ export default function LegalPage({ onBack }: LegalPageProps) {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F87900] mb-4">Privacy Policy</h2>
+            <h2 className="text-2xl font-bold text-[#F8B700] mb-4">Privacy Policy</h2>
             <p className="text-zinc-300 mb-4">
-              The Google News RSS Generator does not collect, store, or process any personal data. All feed generation
+              The Google News RSS Maker does not collect, store, or process any personal data. All feed generation
               happens in your browser, and no data is sent to our servers.
             </p>
             <p className="text-zinc-300">
@@ -68,9 +68,9 @@ export default function LegalPage({ onBack }: LegalPageProps) {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F87900] mb-4">License</h2>
+            <h2 className="text-2xl font-bold text-[#F8B700] mb-4">License</h2>
             <p className="text-zinc-300 mb-4">
-              The Google News RSS Generator is open-source software licensed under the MIT License.
+              The Google News RSS Maker is open-source software licensed under the MIT License.
             </p>
             <div className="bg-zinc-900 p-4 rounded-lg">
               <p className="text-zinc-300 font-mono text-sm">
@@ -101,19 +101,19 @@ export default function LegalPage({ onBack }: LegalPageProps) {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F87900] mb-4">Contact</h2>
+            <h2 className="text-2xl font-bold text-[#F8B700] mb-4">Contact</h2>
             <p className="text-zinc-300 mb-4">If you have any questions about these terms, please contact us:</p>
             <p className="text-zinc-300">
               Email: contact@example.com
               <br />
               GitHub:{" "}
               <a
-                href="https://github.com/yourusername/google-news-rss-generator"
+                href="https://github.com/yourusername/google-news-rss-maker"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#F87900] hover:text-[#F8B700]"
+                className="text-[#F8B700] hover:text-[#F8B700]"
               >
-                github.com/degeniusone/google-news-rss-generator
+                github.com/degeniusone/google-news-rss-maker
               </a>
             </p>
           </section>

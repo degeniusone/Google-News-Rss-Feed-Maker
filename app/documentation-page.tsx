@@ -21,16 +21,16 @@ export default function DocumentationPage({ onBack }: DocumentationPageProps) {
             <ArrowLeft className="h-6 w-6" />
           </Button>
           <h1 className="text-3xl font-bold">
-            <span className="text-[#F8B700]">Google News RSS</span> <span className="text-[#F87900]">Generator</span>
+            <span className="text-[#F8B700]">Google News RSS</span> <span className="text-[#F8B700]">Maker</span>
             <span className="text-xl ml-2 text-zinc-400">Documentation</span>
           </h1>
         </div>
 
         <div className="space-y-8">
           <section>
-            <h2 className="text-2xl font-bold text-[#F87900] mb-4">Introduction</h2>
+            <h2 className="text-2xl font-bold text-[#F8B700] mb-4">Introduction</h2>
             <p className="text-zinc-300 mb-4">
-              Google News RSS Generator allows you to create custom RSS feeds from Google News by combining topics,
+              Google News RSS Maker allows you to create custom RSS feeds from Google News by combining topics,
               keywords, sites, and locations. This tool helps you get the most out of Google News' RSS capabilities,
               which are more powerful than most people realize.
             </p>
@@ -41,7 +41,7 @@ export default function DocumentationPage({ onBack }: DocumentationPageProps) {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F87900] mb-4">Feed Types</h2>
+            <h2 className="text-2xl font-bold text-[#F8B700] mb-4">Feed Types</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-zinc-900 p-4 rounded-lg">
                 <h3 className="text-xl font-bold text-[#F8B700] mb-2">Topic ID</h3>
@@ -95,7 +95,7 @@ export default function DocumentationPage({ onBack }: DocumentationPageProps) {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F87900] mb-4">Advanced Search Options</h2>
+            <h2 className="text-2xl font-bold text-[#F8B700] mb-4">Advanced Search Options</h2>
             <div className="bg-zinc-900 p-6 rounded-lg">
               <h3 className="text-xl font-bold text-[#F8B700] mb-4">Search Operators</h3>
               <ul className="space-y-3">
@@ -140,7 +140,7 @@ export default function DocumentationPage({ onBack }: DocumentationPageProps) {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F87900] mb-4">How to Use</h2>
+            <h2 className="text-2xl font-bold text-[#F8B700] mb-4">How to Use</h2>
             <ol className="space-y-4 text-zinc-300">
               <li>
                 <span className="font-bold text-white">1. Select Language and Region</span>
@@ -148,7 +148,7 @@ export default function DocumentationPage({ onBack }: DocumentationPageProps) {
               </li>
               <li>
                 <span className="font-bold text-white">2. Choose Feed Type</span>
-                <p>Select from Topic ID, Keyword, Site, or Location.</p>
+                <p>Select from Main Topic, Secret Topic, Keyword, Site, or Location.</p>
               </li>
               <li>
                 <span className="font-bold text-white">3. Configure Advanced Options</span>
@@ -170,7 +170,7 @@ export default function DocumentationPage({ onBack }: DocumentationPageProps) {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-[#F87900] mb-4">Limitations</h2>
+            <h2 className="text-2xl font-bold text-[#F8B700] mb-4">Limitations</h2>
             <ul className="list-disc pl-6 space-y-2 text-zinc-300">
               <li>Google News RSS feeds are limited to 100 articles per feed.</li>
               <li>Only one topic or location can be used per feed.</li>
@@ -182,10 +182,10 @@ export default function DocumentationPage({ onBack }: DocumentationPageProps) {
 
           <div className="pt-6 border-t border-zinc-800 flex justify-between items-center">
             <a
-              href="https://github.com/yourusername/google-news-rss-generator"
+              href="https://github.com/yourusername/google-news-rss-maker"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[#F87900] hover:text-[#F8B700] transition-colors"
+              className="flex items-center gap-2 text-[#F8B700] hover:text-[#F8B700] transition-colors"
             >
               <Github className="h-5 w-5" />
               <span>View on GitHub</span>
