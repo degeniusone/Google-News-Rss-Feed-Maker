@@ -2,7 +2,7 @@
 
 # Google News RSS Generator
 
-Google News RSS Generator allows you to create custom RSS feeds from Google News by combining topics, keywords, sites, and locations. This tool helps you get the most out of Google News' RSS capabilities, which are more powerful than most people realize.
+Google News RSS Generator allows you to create custom RSS feeds from Google News by combining topics, keywords, sites, and locations. This tool helps you get the most out of Google News' RSS capabi[...]
 
 You can use these RSS feeds in any feed reader or for data collection purposes. The tool generates the correct URL syntax based on your selections.
 
@@ -84,10 +84,10 @@ Limit results to a specific time frame:
    Add operators and time filters as needed.
 
 4. **Add Items to Your Feed**  
-   Enter your values and click “Add to Feed”.
+   Enter your values and click "Add to Feed".
 
 5. **Generate RSS URL**  
-   Click “Generate RSS Feed URL” to create your feed.
+   Click "Generate RSS Feed URL" to create your feed.
 
 6. **Copy and Use**  
    Use the URL in your RSS reader or app.
